@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>CREATEON | Creative Agency</title>
+    <link rel="icon" type="image/png" href="./assets/fav-ico.png?v=3.0">
+    <link rel="shortcut icon" type="image/png" href="./assets/fav-ico.png?v=3.0">
+    <link rel="apple-touch-icon" href="./assets/fav-ico.png?v=3.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary: #B7EF1D;
+        }
+        
+        * {
+            font-family: 'Outfit', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .text-max {
+            font-size: clamp(60px, 12vw, 150px);
+            line-height: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-[#2D3436] text-white min-h-screen antialiased overflow-x-hidden">
+    <!-- preloader part -->
+    <div id="preloader" class="fixed inset-0 z-[999] bg-white flex items-center justify-center transition-opacity duration-500 hidden">
+        <div class="loader text-primary font-bold text-2xl">
+            Loading...
+        </div>
+    </div>
+
+    <!-- Hero Wrapper with Gradient -->
+    <div class="relative w-full bg-gradient-to-b from-[#000000] to-[#2D3436]">
+    <!-- top bar -->
+    <header class="absolute top-0 w-full z-50 py-6">
+        <div class="w-[90%] mx-auto flex justify-between items-center text-white">
+            <a href="index.html" class="text-2xl font-extrabold tracking-widest text-white">CREATEON</a>
+            
+            <nav class="hidden md:flex gap-8 text-sm font-medium uppercase tracking-wide text-white">
+                <a href="#" class="hover:text-primary transition-colors">Home</a>
+                <a href="#" class="hover:text-primary transition-colors">About Us</a>
+                <a href="#" class="hover:text-primary transition-colors">Service</a>
+                <a href="#" class="hover:text-primary transition-colors">Pages</a>
+                <a href="#" class="hover:text-primary transition-colors">Testimonial</a>
+            </nav>
+            
+            <a href="#" class="hidden md:flex items-center gap-3 bg-primary text-[#2D3436] px-4 py-2.5 pl-6 rounded-full font-semibold uppercase text-xs tracking-wider group">
+                Get Started
+                <span class="bg-[#2D3436] text-primary w-8 h-8 flex items-center justify-center rounded-full transition-transform group-hover:translate-x-1"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+            
+            <button class="md:hidden text-2xl text-white"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-36 pb-20 px-6 md:px-10 max-w-[1500px] mx-auto min-h-screen flex flex-col justify-center relative">
+            <div class="w-full">
+                <h1 class="text-max font-black tracking-tighter text-white">CREATIVE</h1>
+                <h2 class="text-max font-black tracking-tighter text-primary text-right -mt-4 md:-mt-8">AGENCY</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-4 md:-mt-10 relative z-10 w-full">
+                <!-- Left -->
+                <div class="flex flex-col items-start gap-8 pt-10 md:pt-20">
+                    <p class="text-gray-400 text-sm md:text-base max-w-[300px]">
+                        Our awards-winning digital agency creates innovative and impactful design for brands. We seamlessly blend strategy, design, and technology to help you stand out.
+                    </p>
+                    <a href="#" class="flex items-center gap-3 bg-primary text-[#2D3436] px-4 py-2.5 pl-6 rounded-full font-semibold uppercase text-xs tracking-wider group">
+                        Get Started
+                        <span class="bg-[#2D3436] text-primary w-8 h-8 flex items-center justify-center rounded-full transition-transform group-hover:translate-x-1"><i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    
+                    <div class="flex gap-10 mt-6">
+                        <div class="flex flex-col">
+                            <span class="text-4xl font-extrabold text-white">10+</span>
+                            <span class="text-xs text-gray-500 uppercase tracking-widest mt-1">Years Experience</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-4xl font-extrabold text-white">20k+</span>
+                            <span class="text-xs text-gray-500 uppercase tracking-widest mt-1">Projects Completed</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Center Graphic using Local Asset -->
+                <div class="flex justify-center items-center relative min-h-[300px] md:min-h-[400px]">
+                    <img src="./assets/hero_abstract_sculpture.png" alt="Futuristic 3D Abstract Sculpture" class="w-full max-w-[400px] md:max-w-[500px] object-contain drop-shadow-[0_0_40px_rgba(183,239,29,0.2)] animate-[pulse_4s_ease-in-out_infinite] hover:scale-105 transition-transform duration-700">
+                </div>
+                
+                <!-- Right -->
+                <div class="flex flex-col items-end gap-8 md:pt-24 justify-between h-full">
+                    <div class="relative w-[300px] h-[180px] z-10 mt-6 mr-6 md:mt-0 md:mr-0">
+                        <!-- Offset Glass Background Div -->
+                        <div class="absolute -top-4 -right-4 w-[105%] h-[105%] rounded-[24px] border border-white/10 backdrop-blur-md bg-white/5 shadow-2xl z-[-1] transition-transform hover:scale-[1.02]"></div>
+                        <div class="absolute -top-8 -right-8 w-[105%] h-[105%] rounded-[24px] border border-white/10 backdrop-blur-md bg-white/5 shadow-2xl z-[-5] transition-transform hover:scale-[1.02]"></div>
+                        
+                        <!-- Main Video Container -->
+                        <div class="relative w-full h-full rounded-[24px] overflow-hidden border border-white/20 backdrop-blur-xl bg-white/10 flex items-center justify-center p-2 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+                            <iframe class="w-full h-full rounded-[16px] pointer-events-auto relative z-10" src="https://www.youtube.com/embed/BjXGV0X6c0k" title="Programming Hero Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col text-right mt-10 md:mt-0">
+                        <span class="text-4xl font-extrabold text-white">650+</span>
+                        <span class="text-xs text-gray-500 uppercase tracking-widest mt-1">Satisfied Clients</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div> <!-- End Hero Wrapper with Gradient -->
+
+        <!-- Marquee / Static Logos Section from Local Assets -->
+        <div class="bg-[#070707] py-10 relative border-t border-white/10">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-10 flex flex-wrap justify-between items-center gap-10">
+                <img src="./assets/client_logo_2.png" alt="Geometric Shapes Brand Logo" class="h-8 md:h-10 lg:h-12 brightness-0 invert object-contain hidden sm:block opacity-80">
+                <img src="./assets/client_logo_1.png" alt="Abstract Diagonal Rectangles Brand Logo" class="h-8 md:h-10 lg:h-12 brightness-0 invert object-contain opacity-80">
+                <img src="./assets/client_logo_5.png" alt="Bold Diamond Brand Logo" class="h-8 md:h-10 lg:h-12 brightness-0 invert object-contain opacity-80">
+                <img src="./assets/client_logo_3.png" alt="Segmented Circle Sector Logo" class="h-8 md:h-10 lg:h-12 brightness-0 invert object-contain opacity-80">
+                <img src="./assets/client_logo_4.png" alt="Molecular Nodes Brand Logo" class="h-8 md:h-10 lg:h-12 brightness-0 invert object-contain hidden md:block opacity-80">
+            </div>
+        </div>
+
+        <!-- Trust Section -->
+        <section class="py-24 bg-white text-[#2D3436]">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">Why Brands Trust Our<br>Creative Vision</h2>
+                    <p class="text-gray-600 max-w-md text-sm md:text-base">We blend strategy, design, and technology seamlessly. Our experience in cultivating visionary brands helps your business thrive in the industry.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Left Col -->
+                    <div class="flex flex-col gap-10">
+                        <div>
+                            <img src="./assets/lightbulb_spark_icon.png" alt="Creative Spark Lightbulb Icon" class="w-12 h-12 mb-4 object-contain opacity-90">
+                            <h3 class="text-xl font-bold mb-3">Creative Strategy</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">We craft strategic frameworks that align your brand identity with market goals, providing sustainable long-term success.</p>
+                        </div>
+                        <div>
+                            <img src="./assets/innovation_head_icon.png" alt="Innovation Head Silhouette Icon" class="w-12 h-12 mb-4 object-contain opacity-90">
+                            <h3 class="text-xl font-bold mb-3">Visual Excellence</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Our stunning visual designs capture attention and communicate your core values, establishing strong connections with your audience.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Center Col -->
+                    <div class="relative h-[400px] my-10 md:my-0 w-full max-w-[400px] mx-auto">
+                        <div class="absolute top-0 right-0 w-[80%] h-[80%] rounded-[30px] shadow-2xl bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop')] bg-cover bg-center"></div>
+                        <div class="absolute bottom-0 left-0 w-[70%] h-[60%] rounded-[30px] border-8 border-white shadow-xl z-10 bg-[url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop')] bg-cover bg-center"></div>
+                    </div>
+                    
+                    <!-- Right Col -->
+                    <div class="flex flex-col gap-10 md:pt-10">
+                        <div>
+                            <img src="./assets/visionary_eye_icon.png" alt="Visionary Eye Star Icon" class="w-12 h-12 mb-4 object-contain opacity-90">
+                            <h3 class="text-xl font-bold mb-3">Brand Identity</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">We build robust brand identities from the ground up to ensure you resonate deeply and effectively with your target demographic.</p>
+                        </div>
+                        <div>
+                            <img src="./assets/user_avatar_icon.png" alt="Generic User Avatar Icon" class="w-12 h-12 mb-4 object-contain opacity-90">
+                            <h3 class="text-xl font-bold mb-3">Meaningful Impact</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Every project is driven by impact. We measure success by the positive changes our solutions bring to your business metrics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-24 bg-gray-50 text-center">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+                <div class="mb-16">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-[#2D3436] mb-4">What We Do Best</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">From branding to digital spaces, we deliver solutions that elevate your presence and amplify your market impact remarkably.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 text-left">
+                    <div class="bg-[#1f1f1f] rounded-[32px] p-8 md:p-10 text-white relative group min-h-[300px] overflow-hidden hover:-translate-y-1 transition-transform border border-transparent">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-8 p-4 shadow-lg">
+                            <img src="./assets/analytics_card_icon.png" alt="User Analytics Card Icon" class="w-full h-full object-contain">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Branding & Identity</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-16 max-w-sm">We shape brands that stand out in crowded markets through thorough research and inspired creativity. Our comprehensive guidelines ensure lasting marks on your industry.</p>
+                        <a href="#" class="absolute bottom-8 right-8 bg-primary text-[#2D3436] px-5 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2 hover:bg-white transition-colors">Read More <i class="fa-solid fa-circle-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="bg-[#1f1f1f] rounded-[32px] p-8 md:p-10 text-white relative group min-h-[300px] overflow-hidden hover:-translate-y-1 transition-transform border border-transparent">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-8 p-4 shadow-lg">
+                            <img src="./assets/megaphone_marketing_icon.png" alt="Marketing Megaphone Icon" class="w-full h-full object-contain">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Digital Marketing</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-16 max-w-sm">Our tailored marketing strategies drive conversions and amplify your reach. Whether through SEO, PPC, or social media, we ensure your message cuts through the noise.</p>
+                        <a href="#" class="absolute bottom-8 right-8 bg-primary text-[#2D3436] px-5 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2 hover:bg-white transition-colors">Read More <i class="fa-solid fa-circle-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                    <div class="bg-[#1f1f1f] rounded-[32px] p-8 text-white relative group min-h-[350px] overflow-hidden hover:-translate-y-1 transition-transform border border-transparent">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-8 p-4 shadow-lg">
+                            <img src="./assets/software_code_icon.png" alt="Software Development Code Icon" class="w-full h-full object-contain">
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Web Design</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-16">We design beautiful, responsive websites that are functional and engaging, offering intuitive journeys from entry to conversion.</p>
+                        <a href="#" class="absolute bottom-6 right-6 bg-primary text-[#2D3436] px-5 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2 hover:bg-white transition-colors">Read More <i class="fa-solid fa-circle-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="bg-[#1f1f1f] rounded-[32px] p-8 text-white relative group min-h-[350px] overflow-hidden hover:-translate-y-1 transition-transform border border-transparent">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-8 p-4 shadow-lg">
+                            <img src="./assets/team_silhouette_icon.png" alt="Team Member Silhouette Icon" class="w-full h-full object-contain">
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Content Production</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-16">Our producers craft narratives that anchor your brand in the minds of your audience, turning casual readers into loyal customers.</p>
+                        <a href="#" class="absolute bottom-6 right-6 bg-primary text-[#2D3436] px-5 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2 hover:bg-white transition-colors">Read More <i class="fa-solid fa-circle-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="bg-[#1f1f1f] rounded-[32px] p-8 text-white relative group min-h-[350px] overflow-hidden hover:-translate-y-1 transition-transform border border-transparent">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-8 p-4 shadow-lg">
+                            <img src="./assets/fast_execution_icon.png" alt="Fast Execution Speed Icon" class="w-full h-full object-contain">
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Motion & Animation</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-16">We breathe life into design with captivating motion graphics. Visual storytelling via movement creates high-impact engagement.</p>
+                        <a href="#" class="absolute bottom-6 right-6 bg-primary text-[#2D3436] px-5 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2 hover:bg-white transition-colors">Read More <i class="fa-solid fa-circle-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="py-24 bg-white border-y border-gray-100">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-[#2D3436]">Discover Our Client<br>Projects</h2>
+                    <p class="text-gray-600 max-w-md text-sm md:text-base md:text-right">Explore a snapshot of the high-quality products we have delivered to global clients. From branding to apps, we do it all.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+                    <!-- Project 1 (Large, spans 2 cols on lg) -->
+                    <div class="rounded-3xl overflow-hidden relative group min-h-[400px] lg:col-span-2 border-2 border-gray-200 hover:border-primary transition-colors cursor-pointer shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 absolute inset-0" alt="Fintech Dashboard Design">
+                        <div class="absolute bottom-5 left-5 bg-white text-[#2D3436] p-5 rounded-2xl shadow-lg border border-gray-200/50 w-[85%] sm:w-auto">
+                            <h4 class="font-bold text-lg mb-1">Fintech Solution</h4>
+                            <p class="text-xs text-gray-500 font-medium">UI/UX Design / Web Development</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 (Tall/Standard) -->
+                    <div class="rounded-3xl overflow-hidden relative group min-h-[400px] border-2 border-gray-200 hover:border-primary transition-colors cursor-pointer shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 absolute inset-0" alt="Urban Fashion Model">
+                        <div class="absolute bottom-5 left-5 bg-white text-[#2D3436] p-5 rounded-2xl shadow-lg border border-gray-200/50 w-[85%]">
+                            <h4 class="font-bold text-lg mb-1">Urban Fashion App</h4>
+                            <p class="text-xs text-gray-500 font-medium">Mobile App Design / Strategy</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="rounded-3xl overflow-hidden relative group min-h-[350px] border-2 border-gray-200 hover:border-primary transition-colors cursor-pointer shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1525088553748-01d6e210e00b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 absolute inset-0" alt="Coffee Aesthetic">
+                        <div class="absolute bottom-5 left-5 bg-white text-[#2D3436] p-5 rounded-2xl shadow-lg border border-gray-200/50 w-[85%]">
+                            <h4 class="font-bold text-lg mb-1">Pure Coffee</h4>
+                            <p class="text-xs text-gray-500 font-medium">Packaging / Identity</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 4 -->
+                    <div class="rounded-3xl overflow-hidden relative group min-h-[350px] border-2 border-gray-200 hover:border-primary transition-colors cursor-pointer shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1563841930606-67e2bce48b78?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 absolute inset-0" alt="Neon Festival Stage">
+                        <div class="absolute bottom-5 left-5 bg-white text-[#2D3436] p-5 rounded-2xl shadow-lg border border-gray-200/50 w-[85%]">
+                            <h4 class="font-bold text-lg mb-1">Neon Festival</h4>
+                            <p class="text-xs text-gray-500 font-medium">Social Media / Event Production</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 5 -->
+                    <div class="rounded-3xl overflow-hidden relative group min-h-[350px] border-2 border-gray-200 hover:border-primary transition-colors cursor-pointer shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 absolute inset-0" alt="Eco Plant Globe">
+                        <div class="absolute bottom-5 left-5 bg-white text-[#2D3436] p-5 rounded-2xl shadow-lg border border-gray-200/50 w-[85%]">
+                            <h4 class="font-bold text-lg mb-1">Global Eco Summit</h4>
+                            <p class="text-xs text-gray-500 font-medium">Event Branding / Promo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-24 bg-white text-[#2D3436]">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-5 gap-12">
+                <div class="lg:col-span-2">
+                    <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">Everything you<br>want to know</h2>
+                </div>
+                
+                <div class="lg:col-span-3 accordion flex flex-col gap-4">
+                    <!-- Open Item -->
+                    <div class="acc-item active bg-[#1f1f1f] text-white rounded-2xl overflow-hidden transition-all duration-300 shadow-md">
+                        <div class="acc-header flex justify-between items-center p-6 cursor-pointer">
+                            <h3 class="text-lg font-bold">What types of projects do you specialize in?</h3>
+                            <span class="icon text-2xl font-light">-</span>
+                        </div>
+                        <div class="acc-content px-6 pb-6 text-gray-400 text-sm block">
+                            <p>We firmly believe in pushing boundaries. We specialize in digital product design, web & app development, digital strategy, advertising, branding, and video production.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Closed Items -->
+                    <div class="acc-item bg-primary text-[#2D3436] rounded-2xl overflow-hidden transition-all duration-300">
+                        <div class="acc-header flex justify-between items-center p-6 cursor-pointer">
+                            <h3 class="text-lg font-bold">Can you handle both design and strategy?</h3>
+                            <span class="icon text-2xl font-light">+</span>
+                        </div>
+                        <div class="acc-content px-6 pb-6 text-gray-400 text-sm hidden">
+                            <p>Yes, our multidisciplinary team incorporates strategy from the very beginning of the design process, ensuring our beautifully crafted solutions also meet your business goals.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="acc-item bg-primary text-[#2D3436] rounded-2xl overflow-hidden transition-all duration-300">
+                        <div class="acc-header flex justify-between items-center p-6 cursor-pointer">
+                            <h3 class="text-lg font-bold">Do you work with international clients?</h3>
+                            <span class="icon text-2xl font-light">+</span>
+                        </div>
+                        <div class="acc-content px-6 pb-6 text-gray-400 text-sm hidden">
+                            <p>Absolutely! We have partnered with ambitious companies all over the world to deliver seamless global projects with localized impacts.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="acc-item bg-primary text-[#2D3436] rounded-2xl overflow-hidden transition-all duration-300">
+                        <div class="acc-header flex justify-between items-center p-6 cursor-pointer">
+                            <h3 class="text-lg font-bold">How can I start a project with your team?</h3>
+                            <span class="icon text-2xl font-light">+</span>
+                        </div>
+                        <div class="acc-content px-6 pb-6 text-gray-400 text-sm hidden">
+                            <p>Simply reach out via our contact form or drop us an email. We will schedule a discovery call to understand your needs and see if we are a perfect fit.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="acc-item bg-primary text-[#2D3436] rounded-2xl overflow-hidden transition-all duration-300">
+                        <div class="acc-header flex justify-between items-center p-6 cursor-pointer">
+                            <h3 class="text-lg font-bold">How long does a typical project take to complete?</h3>
+                            <span class="icon text-2xl font-light">+</span>
+                        </div>
+                        <div class="acc-content px-6 pb-6 text-gray-400 text-sm hidden">
+                            <p>Timelines vary largely based on scope. A branding package might take 4-6 weeks, whereas a comprehensive web platform could take between 3-6 months.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#070707] text-white pt-24 pb-0 relative overflow-hidden border-t border-white/10">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-4 gap-12 mb-10 z-10 relative">
+            <div class="md:col-span-2">
+                <h2 class="text-3xl font-extrabold mb-5 tracking-wider">CREATEON</h2>
+                <p class="text-gray-500 text-sm max-w-sm mb-8 leading-relaxed">We are a visionary agency that drives real results through our powerful blend of strategy, creative design, and technical brilliance.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-11 h-11 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-[#2D3436] transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-11 h-11 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-[#2D3436] transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="w-11 h-11 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-[#2D3436] transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-11 h-11 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-[#2D3436] transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-xl font-bold mb-6">Quick Link</h3>
+                <ul class="flex flex-col gap-3 text-gray-500 text-sm">
+                    <li><a href="#" class="hover:text-primary transition-colors hover:text-primary">About Us</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors hover:text-primary">Portfolio</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors hover:text-primary">Service</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors hover:text-primary">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-xl font-bold mb-6">Contact Me</h3>
+                <ul class="flex flex-col gap-4 text-gray-500 text-sm">
+                    <li class="flex items-center gap-4"><i class="fa-solid fa-envelope text-primary text-lg"></i> Contact@gmail.com</li>
+                    <li class="flex items-center gap-4"><i class="fa-solid fa-phone text-primary text-lg"></i> +123 4567 8901</li>
+                    <li class="flex items-center gap-4"><i class="fa-solid fa-location-dot text-primary text-lg"></i> 123 Street Name, New York</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="w-full text-center overflow-hidden pt-10">
+            <span class="text-[20vw] font-bold text-primary tracking-tighter leading-[0.6] block transform translate-y-[20%]">CREATEON</span>
+        </div>
+    </footer>
+
+    <script src="./script/index.js"></script>
+    <script>
+        // Remove preloader after a slight delay
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.opacity = '0';
+                setTimeout(() => { preloader.style.display = 'none'; }, 500);
+            }
+        });
+    </script>
+</body>
+</html>
