@@ -17,12 +17,29 @@
             --primary: #c1ff00;
         }
 
-        .text-primary { color: var(--primary); }
-        .bg-primary { background-color: var(--primary); }
-        .border-primary { border-color: var(--primary); }
-        .hover\:text-primary:hover { color: var(--primary); }
-        .hover\:bg-primary:hover { background-color: var(--primary); }
-        .hover\:border-primary:hover { border-color: var(--primary); }
+        .text-primary {
+            color: var(--primary);
+        }
+
+        .bg-primary {
+            background-color: var(--primary);
+        }
+
+        .border-primary {
+            border-color: var(--primary);
+        }
+
+        .hover\:text-primary:hover {
+            color: var(--primary);
+        }
+
+        .hover\:bg-primary:hover {
+            background-color: var(--primary);
+        }
+
+        .hover\:border-primary:hover {
+            border-color: var(--primary);
+        }
 
         * {
             margin: 0;
@@ -30,7 +47,7 @@
             box-sizing: border-box;
             font-family: 'Outfit', sans-serif;
         }
-       
+
         body {
             background: #070707;
             color: #ffffff;
@@ -47,20 +64,20 @@
                 font-size: 45px;
             }
         }
-
-        /* Custom styles for details/summary to match original accordion look */
-        details > summary {
-            list-style: none; /* Remove default marker */
-        }
-        details > summary::-webkit-details-marker {
-            display: none; /* Remove default marker for Webkit browsers */
+        details>summary {
+            list-style: none;
         }
 
-        details[open] .icon-plus::before {
-            content: '-';
+        details>summary::-webkit-details-marker {
+            display: none;
         }
-        details:not([open]) .icon-plus::before {
-            content: '+';
+
+        details[open] .rotate-icon {
+            transform: rotate(180deg);
+        }
+
+        details summary::-webkit-details-marker {
+            display: none;
         }
     </style>
 </head>
@@ -80,17 +97,14 @@
                         <a href="#" class="hover:text-primary transition-colors">Testimonial</a>
                     </nav>
 
-                    <a href="#"
-                        class="bg-primary text-[#2D3436] px-4 py-2.5 pl-6 font-bold gap-3 hidden items-center md:flex rounded-full text-xs tracking-wider uppercase group">
+                    <a href="#" class="bg-primary text-[#2D3436] px-4 py-2.5 pl-6 font-bold gap-3 hidden items-center md:flex rounded-full text-xs tracking-wider uppercase group">
                         Get Started
-                        <span
-                            class="bg-[#2D3436] h-8 w-8 flex items-center justify-center rounded-full text-primary group-hover:translate-x-1"><i
-                                class="fa-solid fa-arrow-right"></i></span>
+                        <span class="bg-[#2D3436] h-8 w-8 flex items-center justify-center rounded-full text-primary group-hover:translate-x-1"><i class="fa-solid fa-arrow-right"></i></span>
                     </a>
 
                     <button id="menu-btn" class="md:hidden text-2xl text-white"><i class="fa-solid fa-bars"></i></button>
                 </div>
-                
+
                 <div id="mobile-menu" class="bg-[#0a0a0a] border-b border-white/10 z-50 absolute flex-col flex gap-7 items-center hidden left-0 p-12 shadow-2xl top-20 text-center w-full">
                     <a href="#" class="font-bold text-white uppercase text-lg tracking-widest hover:text-primary transition-colors">Home</a>
                     <a href="#" class="font-bold text-white uppercase text-lg tracking-widest hover:text-primary transition-colors">About Us</a>
@@ -106,9 +120,7 @@
                     class="pt-36 pb-20 px-6 md:px-10 max-w-[1500px] mx-auto min-h-screen flex flex-col justify-center relative items-start">
                     <div class="w-full text-left">
                         <h1 class="font-black text-6xl sm:text-8xl md:text-10xl text-white/80 tracking-tight">CREATIVE</h1>
-                        <h2
-                            class="font-black text-6xl sm:text-8xl md:text-10xl text-primary tracking-tight -mt-2 md:-mt-8 text-left md:text-right">
-                            AGENCY</h2>
+                        <h2 class="font-black text-6xl sm:text-8xl md:text-10xl text-primary tracking-tight -mt-2 md:-mt-8 text-left md:text-right">AGENCY</h2>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-4 md:-mt-10 relative z-10 w-full">
@@ -145,8 +157,7 @@
                         </div>
 
                         <div class="hidden sm:flex justify-center items-center relative min-h-[300px] md:min-h-[400px] overflow-hidden">
-                            <img src="./assets/hero_abstract_sculpture.png" alt="Futuristic 3D Abstract Sculpture"
-                                class="w-full max-w-[400px] md:max-w-[500px] object-contain hover:scale-105 animate-pulse duration-300">
+                            <img src="./assets/hero_abstract_sculpture.png" alt="Futuristic 3D Abstract Sculpture" class="w-full max-w-[400px] md:max-w-[500px] object-contain hover:scale-105 animate-pulse duration-300">
                         </div>
 
                         <div class="flex flex-col items-center md:items-end gap-8 md:pt-24 justify-between h-full">
@@ -175,24 +186,19 @@
         <div class="bg-[#070707] py-10 relative w-full border-0">
             <div class="flex-wrap items-center justify-center gap-4 md:gap-10 max-w-full md:justify-between mx-auto px-6 md:px-10 flex">
                 <div class="bg-white/5 border border-white/10 flex items-center justify-center md:bg-transparent md:border-none md:p-0 md:rounded-none p-3 rounded-2xl overflow-hidden">
-                    <img src="./assets/client_logo_2.png" alt="Geometric Shapes Brand Logo"
-                        class="h-6 md:h-10 lg:h-12 brightness-0 invert object-contain opacity-80">
+                    <img src="./assets/client_logo_2.png" alt="Geometric Shapes Brand Logo" class="h-6 md:h-10 lg:h-12 brightness-0 invert object-contain opacity-80">
                 </div>
                 <div class="bg-white/5 border border-white/10 flex items-center justify-center md:bg-transparent md:border-none md:p-0 md:rounded-none p-3 rounded-2xl overflow-hidden">
-                    <img src="./assets/client_logo_1.png" alt="Abstract Diagonal Rectangles Brand Logo"
-                        class="h-6 md:h-10 lg:h-12 brightness-0 invert object-contain opacity-80">
+                    <img src="./assets/client_logo_1.png" alt="Abstract Diagonal Rectangles Brand Logo" class="h-6 md:h-10 lg:h-12 brightness-0 invert object-contain opacity-80">
                 </div>
                 <div class="bg-white/5 border border-white/10 flex items-center justify-center md:bg-transparent md:border-none md:p-0 md:rounded-none p-3 rounded-2xl overflow-hidden">
-                    <img src="./assets/client_logo_5.png" alt="Bold Diamond Brand Logo"
-                        class="h-6 md:h-10 lg:h-12 brightness-0 invert object-contain opacity-80">
+                    <img src="./assets/client_logo_5.png" alt="Bold Diamond Brand Logo" class="h-6 md:h-10 lg:h-12 brightness-0 invert object-contain opacity-80">
                 </div>
                 <div class="bg-white/5 border border-white/10 flex items-center justify-center md:bg-transparent md:border-none md:p-0 md:rounded-none p-3 rounded-2xl overflow-hidden">
-                    <img src="./assets/client_logo_3.png" alt="Segmented Circle Sector Logo"
-                        class="h-6 md:h-10 lg:h-12 brightness-0 invert object-contain opacity-80">
+                    <img src="./assets/client_logo_3.png" alt="Segmented Circle Sector Logo" class="h-6 md:h-10 lg:h-12 brightness-0 invert object-contain opacity-80">
                 </div>
                 <div class="bg-white/5 border border-white/10 flex items-center justify-center md:bg-transparent md:border-none md:p-0 md:rounded-none p-3 rounded-2xl overflow-hidden">
-                    <img src="./assets/client_logo_4.png" alt="Molecular Nodes Brand Logo"
-                        class="h-6 md:h-10 lg:h-12 brightness-0 invert object-contain opacity-80">
+                    <img src="./assets/client_logo_4.png" alt="Molecular Nodes Brand Logo" class="h-6 md:h-10 lg:h-12 brightness-0 invert object-contain opacity-80">
                 </div>
             </div>
         </div>
@@ -209,41 +215,41 @@
                         <h2
                             class="text-4xl md:text-5xl font-black text-white leading-[0.9] tracking-tighter mb-6 uppercase">
                             why brands<br><span class="text-primary">trust us.</span></h2>
-                        <p class="text-gray-400 text-sm leading-relaxed max-w-md">We don't follow trends; we set them.
+                        <p class="text-gray-400 text-lg leading-relaxed max-w-md">We don't follow trends; we set them.
                             Our multidisciplinary approach ensures every pixel, line of code, and strategic move aligns
                             with your visionary goals.</p>
                         <div class="mt-12 flex flex-col gap-8">
                             <div class="flex items-center gap-6 group cursor-pointer">
                                 <div
-                                    class="w-20 h-20 rounded-3xl flex-shrink-0 bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:bg-primary group-hover:text-[#2d3436] shadow-xl">
+                                    class="w-20 h-20 rounded-3xl flex-shrink-0 bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:bg-primary group-hover:text-[#c1ff33] shadow-xl">
                                     <i class="fa-solid fa-lightbulb text-3xl"></i>
                                 </div>
                                 <div>
                                     <h3 class="text-xl font-bold text-white mb-1">Creative Strategy</h3>
-                                    <p class="text-gray-500 text-[10px]">Strategic frameworks tailored for long-term
+                                    <p class="text-gray-500 text-base">Strategic frameworks tailored for long-term
                                         dominance.</p>
                                 </div>
                             </div>
                             <div class="flex items-center gap-6 group cursor-pointer">
                                 <div
-                                    class="w-20 h-20 rounded-3xl flex-shrink-0 bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:bg-primary group-hover:text-[#2d3436] shadow-xl">
+                                    class="w-20 h-20 rounded-3xl flex-shrink-0 bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:bg-primary group-hover:text-[#c1ff33] shadow-xl">
                                     <i class="fa-solid fa-eye text-3xl"></i>
                                 </div>
                                 <div>
                                     <h3 class="text-xl font-bold text-white mb-1">Visual Excellence</h3>
-                                    <p class="text-gray-500 text-[10px]">Stunning aesthetics that command absolute
+                                    <p class="text-gray-500 text-base">Stunning aesthetics that command absolute
                                         attention.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="relative flex flex-row gap-5 md:block pt-10">
-                        <div class="aspect-square border-0 border-primary overflow-hidden relative rotate-3 rounded-[24px] shadow-xl md:rotate-6 md:rounded-[34px] md:shadow-2xl transition w-1/2 md:w-full z-10 hover:rotate-3 bg-[#111]">
-                             <img src="./assets/trust-1.jpg" alt="Work" class="h-full object-cover w-full">
+                        <div class="aspect-square border-0 border-primary overflow-hidden relative rotate-3 rounded-[24px] shadow-xl md:rotate-6 md:rounded-[34px] md:shadow-2xl transition-all duration-700 w-1/2 md:w-full z-10 hover:rotate-3 bg-[#111] hover:scale-105">
+                            <img src="./assets/trust-1.jpg" alt="Work" class="h-full object-cover w-full transition-transform duration-700 ease-in-out hover:scale-110">
                         </div>
-                       
-                        <div class="relative md:absolute aspect-square border-0 border-primary overflow-hidden rounded-[20px] shadow-lg md:rounded-[28px] md:shadow-2xl transition w-1/2 md:w-1/2 z-20 md:-bottom-8 md:-left-8 -rotate-3 md:-rotate-12 hover:-rotate-3 bg-[#111]">
-                            <img src="./assets/trust-2.jpg" alt="Team" class="h-full object-cover w-full">
+
+                        <div class="relative md:absolute aspect-square border-0 border-primary overflow-hidden rounded-[20px] shadow-lg md:rounded-[28px] md:shadow-2xl transition-all duration-700 w-1/2 md:w-1/2 z-20 md:-bottom-8 md:-left-8 -rotate-3 md:-rotate-12 hover:-rotate-3 bg-[#111] hover:scale-110">
+                            <img src="./assets/trust-2.jpg" alt="Team" class="h-full object-cover w-full transition-transform duration-700 ease-in-out hover:scale-110">
                         </div>
 
                         <div class="absolute bg-primary h-48 md:h-64 opacity-20 w-48 md:w-64 z-0 -right-10 -top-10 blur-[80px] md:blur-[100px]"></div>
@@ -253,122 +259,81 @@
             </div>
         </section>
 
-        <section class="py-20 relative border-b border-white/5">
+        <section class="py-20 relative border-b border-white/5 mt-14">
             <div class="max-w-[1400px] mx-auto px-6 md:px-10">
                 <div class="text-center mb-16">
-                    <span
-                        class="text-primary font-black uppercase tracking-[0.5em] text-[10px] mb-4 block">Services</span>
+                    <span class="text-primary font-black uppercase tracking-[0.5em] text-sm mb-4 block">Services</span>
                     <h2 class="text-4xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">CODE
                         & <span class="text-primary">CRAFT</span></h2>
                 </div>
 
-                <div
-                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5 rounded-[40px] sm:rounded-[60px] overflow-hidden shadow-2xl">
-                    <div
-                        class="p-12 hover:bg-white/5 group cursor-pointer min-h-[450px] flex flex-col justify-between border-r border-b border-white/5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5 rounded-[40px] sm:rounded-[60px] overflow-hidden shadow-2xl">
+                    <div class="p-12 hover:bg-white/5 group cursor-pointer min-h-[350px] flex flex-col justify-between border-r border-b border-white/5 transition-all duration-500 opacity-70 hover:opacity-100">
                         <div>
-                            <span
-                                class="text-primary text-5xl font-black opacity-10 mb-6 block group-hover:opacity-100 group-hover:translate-x-4">01.</span>
-                            <h3 class="text-2xl font-extrabold text-white mb-4 uppercase tracking-tight">Branding &
-                                Identity</h3>
-                            <p class="text-gray-400 leading-relaxed text-[xs]">Defining legendary brands through deep
-                                industrial insights and avant-garde creative direction that lasts forever.</p>
+                            <span class="text-primary text-5xl font-black opacity-10 mb-6 block transition-all duration-500 group-hover:opacity-100">01.</span>
+                            <h3 class="text-2xl font-extrabold text-white mb-4 uppercase tracking-tight transition-colors duration-500 group-hover:text-primary">Branding & Identity</h3>
+                            <p class="text-gray-400 leading-relaxed text-base">Defining legendary brands through deep industrial insights and avant-garde creative direction that lasts forever.</p>
                         </div>
-                        <div class="flex items-center justify-between mt-10">
-                            <span
-                                class="text-[10px] text-gray-500 font-bold uppercase tracking-widest group-hover:text-primary transition-colors">Learn
-                                More</span>
-                            <div
-                                class="w-14 h-14 rounded-2xl border border-white/10 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-[#2d3436]">
-                                <i
-                                    class="fa-solid fa-arrow-right-long text-xl -rotate-45 group-hover:rotate-0"></i>
+                        <div class="flex items-center justify-between mt-6">
+                            <span class="text-[10px] text-gray-500 font-bold uppercase tracking-widest group-hover:text-primary transition-colors duration-500">Learn More</span>
+                            <div class="w-14 h-14 rounded-2xl border border-white/10 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-[#c1ff33] duration-500 transition-all shadow-lg">
+                                <i class="fa-solid fa-arrow-right-long text-xl -rotate-45 group-hover:rotate-0 transition-transform duration-500 ease-out"></i>
                             </div>
                         </div>
                     </div>
 
-                    <div
-                        class="p-12 hover:bg-white/5 group cursor-pointer min-h-[450px] flex flex-col justify-between border-r border-b border-white/5">
+                    <div class="p-12 hover:bg-white/5 group cursor-pointer min-h-[350px] flex flex-col justify-between border-r border-b border-white/5 transition-all duration-500 opacity-70 hover:opacity-100">
                         <div>
-                            <span
-                                class="text-primary text-5xl font-black opacity-10 mb-6 block group-hover:opacity-100 group-hover:translate-x-4">02.</span>
-                            <h3 class="text-2xl font-extrabold text-white mb-4 uppercase tracking-tight">Digital
-                                Marketing</h3>
-                            <p class="text-gray-400 leading-relaxed text-xs">Tailored viral growth strategies and
-                                performance marketing that puts your brand at the center of global attention.</p>
+                            <span class="text-primary text-5xl font-black opacity-10 mb-6 block transition-all duration-500 group-hover:opacity-100">02.</span>
+                            <h3 class="text-2xl font-extrabold text-white mb-4 uppercase tracking-tight transition-colors duration-500 group-hover:text-primary">Digital Marketing</h3>
+                            <p class="text-gray-400 leading-relaxed text-base">Tailored viral growth strategies and performance marketing that puts your brand at the center of global attention.</p>
                         </div>
-                        <div class="flex items-center justify-between mt-10">
-                            <span
-                                class="text-[10px] text-gray-500 font-bold uppercase tracking-widest group-hover:text-primary transition-colors">Learn
-                                More</span>
-                            <div
-                                class="w-14 h-14 rounded-2xl border border-white/10 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-[#2d3436]">
-                                <i
-                                    class="fa-solid fa-arrow-right-long text-xl -rotate-45 group-hover:rotate-0"></i>
+                        <div class="flex items-center justify-between mt-6">
+                            <span class="text-[10px] text-gray-500 font-bold uppercase tracking-widest group-hover:text-primary transition-colors duration-500">Learn More</span>
+                            <div class="w-14 h-14 rounded-2xl border border-white/10 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-[#c1ff33] duration-500 transition-all shadow-lg">
+                                <i class="fa-solid fa-arrow-right-long text-xl -rotate-45 group-hover:rotate-0 transition-transform duration-500 ease-out"></i>
                             </div>
                         </div>
                     </div>
 
-                    <div
-                        class="p-12 hover:bg-white/5 group cursor-pointer min-h-[450px] flex flex-col justify-between border-b border-white/5">
+                    <div class="p-12 hover:bg-white/5 group cursor-pointer min-h-[350px] flex flex-col justify-between border-b border-white/5 transition-all duration-500 opacity-70 hover:opacity-100">
                         <div>
-                            <span
-                                class="text-primary text-5xl font-black opacity-10 mb-6 block group-hover:opacity-100 group-hover:translate-x-4">03.</span>
-                            <h3 class="text-2xl font-extrabold text-white mb-4 uppercase tracking-tight">Web Design</h3>
-                            <p class="text-gray-400 leading-relaxed text-xs">Immersive digital environments built with
-                                high-performance code and award-winning aesthetic precision.</p>
+                            <span class="text-primary text-5xl font-black opacity-10 mb-6 block transition-all duration-500 group-hover:opacity-100">03.</span>
+                            <h3 class="text-2xl font-extrabold text-white mb-4 uppercase tracking-tight transition-colors duration-500 group-hover:text-primary">Web Design</h3>
+                            <p class="text-gray-400 leading-relaxed text-base">Immersive digital environments built with high-performance code and award-winning aesthetic precision.</p>
                         </div>
-                        <div class="flex items-center justify-between mt-10">
-                            <span
-                                class="text-[10px] text-gray-500 font-bold uppercase tracking-widest group-hover:text-primary transition-colors">Learn
-                                More</span>
-                            <div
-                                class="w-14 h-14 rounded-2xl border border-white/10 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-[#2d3436]">
-                                <i
-                                    class="fa-solid fa-arrow-right-long text-xl -rotate-45 group-hover:rotate-0"></i>
+                        <div class="flex items-center justify-between mt-6">
+                            <span class="text-[10px] text-gray-500 font-bold uppercase tracking-widest group-hover:text-primary transition-colors duration-500">Learn More</span>
+                            <div class="w-14 h-14 rounded-2xl border border-white/10 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-[#c1ff33] duration-500 transition-all shadow-lg">
+                                <i class="fa-solid fa-arrow-right-long text-xl -rotate-45 group-hover:rotate-0 transition-transform duration-500 ease-out"></i>
                             </div>
                         </div>
                     </div>
 
-                    <div
-                        class="p-12 hover:bg-white/5 group cursor-pointer min-h-[450px] flex flex-col justify-between border-r border-white/5">
+                    <div class="p-12 hover:bg-white/5 group cursor-pointer min-h-[350px] flex flex-col justify-between border-r border-white/5 transition-all duration-500 opacity-70 hover:opacity-100">
                         <div>
-                            <span
-                                class="text-primary text-5xl font-black opacity-10 mb-6 block group-hover:opacity-100 group-hover:translate-x-4">04.</span>
-                            <h3 class="text-2xl font-extrabold text-white mb-4 uppercase tracking-tight">Content
-                                Production</h3>
-                            <p class="text-gray-400 leading-relaxed text-xs">Storytelling that connects. From high-end
-                                cinematography to viral social copy, we produce impact.</p>
+                            <span class="text-primary text-5xl font-black opacity-10 mb-6 block transition-all duration-500 group-hover:opacity-100">04.</span>
+                            <h3 class="text-2xl font-extrabold text-white mb-4 uppercase tracking-tight transition-colors duration-500 group-hover:text-primary">Content Production</h3>
+                            <p class="text-gray-400 leading-relaxed text-base">Storytelling that connects. From high-end cinematography to viral social copy, we produce impact.</p>
                         </div>
-                        <div class="flex items-center justify-between mt-10">
-                            <span
-                                class="text-[10px] text-gray-500 font-bold uppercase tracking-widest group-hover:text-primary transition-colors">Learn
-                                More</span>
-                            <div
-                                class="w-14 h-14 rounded-2xl border border-white/10 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-[#2d3436]">
-                                <i
-                                    class="fa-solid fa-arrow-right-long text-xl -rotate-45 group-hover:rotate-0"></i>
+                        <div class="flex items-center justify-between mt-6">
+                            <span class="text-[10px] text-gray-500 font-bold uppercase tracking-widest group-hover:text-primary transition-colors duration-500">Learn More</span>
+                            <div class="w-14 h-14 rounded-2xl border border-white/10 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-[#c1ff33] duration-500 transition-all shadow-lg">
+                                <i class="fa-solid fa-arrow-right-long text-xl -rotate-45 group-hover:rotate-0 transition-transform duration-500 ease-out"></i>
                             </div>
                         </div>
                     </div>
 
-                    <div
-                        class="p-12 hover:bg-white/5 group cursor-pointer min-h-[450px] flex flex-col justify-between border-r border-white/5">
+                    <div class="p-12 hover:bg-white/5 group cursor-pointer min-h-[350px] flex flex-col justify-between border-r border-white/5 transition-all duration-500 opacity-70 hover:opacity-100">
                         <div>
-                            <span
-                                class="text-primary text-5xl font-black opacity-10 mb-6 block group-hover:opacity-100 group-hover:translate-x-4">05.</span>
-                            <h3 class="text-2xl font-extrabold text-white mb-4 uppercase tracking-tight">Motion Graphics
-                            </h3>
-                            <p class="text-gray-400 leading-relaxed text-xs">Breathing life into static designs. Dynamic
-                                animations that explain, engage, and convert at a glance.</p>
+                            <span class="text-primary text-5xl font-black opacity-10 mb-6 block transition-all duration-500 group-hover:opacity-100">05.</span>
+                            <h3 class="text-2xl font-extrabold text-white mb-4 uppercase tracking-tight transition-colors duration-500 group-hover:text-primary">Motion Graphics</h3>
+                            <p class="text-gray-400 leading-relaxed text-base">Breathing life into static designs. Dynamic animations that explain, engage, and convert at a glance.</p>
                         </div>
-                        <div class="flex items-center justify-between mt-10">
-                            <span
-                                class="text-[10px] text-gray-500 font-bold uppercase tracking-widest group-hover:text-primary transition-colors">Learn
-                                More</span>
-                            <div
-                                class="w-14 h-14 rounded-2xl border border-white/10 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-[#2d3436]">
-                                <i
-                                    class="fa-solid fa-arrow-right-long text-xl -rotate-45 group-hover:rotate-0"></i>
+                        <div class="flex items-center justify-between mt-6">
+                            <span class="text-[10px] text-gray-500 font-bold uppercase tracking-widest group-hover:text-primary transition-colors duration-500">Learn More</span>
+                            <div class="w-14 h-14 rounded-2xl border border-white/10 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-[#c1ff33] duration-500 transition-all shadow-lg">
+                                <i class="fa-solid fa-arrow-right-long text-xl -rotate-45 group-hover:rotate-0 transition-transform duration-500 ease-out"></i>
                             </div>
                         </div>
                     </div>
@@ -397,70 +362,49 @@
                         <h2 class="text-3xl md:text-5xl font-black leading-none text-white tracking-tighter">OUR
                             RECENT<br><span class="text-primary italic">PROJECTS</span></h2>
                     </div>
-                    <p class="text-gray-400 max-w-xs text-[10px] md:text-right leading-relaxed">
+                    <p class="text-gray-400 max-w-md text-base md:text-right leading-relaxed">
                         We don't just build products; we craft digital experiences that resonate. Explore our latest
                         success stories.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 grid-rows-none lg:grid-rows-3 gap-4 h-auto lg:h-[450px]">
-                    <div
-                        class="lg:col-span-2 lg:row-span-2 rounded-[32px] overflow-hidden relative group cursor-pointer border border-white/10 hover:border-primary/50 shadow-2xl min-h-[250px] bg-[#111]">
-                        <img src="./assets/project-1.jpg" alt="Fintech Project"
-                            class="w-full h-full object-cover group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 right-6">
-                            <span
-                                class="bg-primary text-[#2D3436] px-3 py-0.5 rounded-full text-[8px] font-black mb-2 inline-block uppercase tracking-widest">Digital
-                                FinTech</span>
-                            <h3 class="text-xl md:text-2xl font-black text-white mb-1 leading-none">FINTECH<br>SOLUTION
-                            </h3>
+                    <div class="lg:col-span-2 lg:row-span-2 rounded-[32px] overflow-hidden relative group cursor-pointer border border-white/10 hover:border-primary/50 shadow-2xl min-h-[250px] bg-black transition-all duration-500 opacity-70 hover:opacity-100">
+                        <img src="./assets/project-1.jpg" alt="Fintech Project" class="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute bottom-8 left-8 right-8">
+                            <span class="bg-primary text-[#2D3436] px-3 py-1 rounded-full text-[8px] font-black mb-3 inline-block uppercase tracking-widest shadow-lg">Digital FinTech</span>
+                            <h3 class="text-2xl md:text-3xl font-black text-white mb-1 leading-none tracking-tighter">FINTECH<br>SOLUTION</h3>
                         </div>
                     </div>
 
-                    <div
-                        class="lg:col-span-1 lg:row-span-2 rounded-[32px] overflow-hidden relative group cursor-pointer border border-white/10 hover:border-primary/50 shadow-xl min-h-[250px] bg-[#111]">
-                        <img src="./assets/project-2.jpg" alt="Urban Fashion"
-                            class="w-full h-full object-cover group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors">
-                        </div>
-                        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                            <h3
-                                class="text-lg font-black text-white mb-2 lg:rotate-[-90deg] lg:translate-y-10 group-hover:translate-y-0 origin-center whitespace-nowrap">
-                                URBAN FASHION</h3>
+                    <div class="lg:col-span-1 lg:row-span-2 rounded-[32px] overflow-hidden relative group cursor-pointer border border-white/10 hover:border-primary/50 shadow-xl min-h-[250px] bg-black transition-all duration-500 opacity-70 hover:opacity-100">
+                        <img src="./assets/project-2.jpg" alt="Urban Fashion" class="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/70 transition-all duration-500 backdrop-blur-[2px] group-hover:backdrop-blur-none"></div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center transform transition-all duration-500">
+                            <h3 class="text-lg font-black text-white mb-2 lg:rotate-[-90deg] lg:translate-y-10 group-hover:translate-y-0 group-hover:rotate-0 origin-center whitespace-nowrap transition-all duration-700 ease-out">URBAN FASHION</h3>
                         </div>
                     </div>
 
-                    <div
-                        class="lg:col-span-1 lg:row-span-1 rounded-[32px] overflow-hidden relative group cursor-pointer border border-white/10 hover:border-primary/50 min-h-[150px] bg-[#111]">
-                        <img src="./assets/project-3.jpg" alt="Pure Coffee"
-                            class="w-full h-full object-cover group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-tr from-black/80 to-transparent flex flex-col justify-end p-4">
+                    <div class="lg:col-span-1 lg:row-span-1 rounded-[32px] overflow-hidden relative group cursor-pointer border border-white/10 hover:border-primary/50 min-h-[150px] bg-black transition-all duration-500 opacity-70 hover:opacity-100">
+                        <img src="./assets/project-3.jpg" alt="Pure Coffee" class="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-black/90 to-transparent flex flex-col justify-end p-6 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
                             <h4 class="text-base font-bold text-white uppercase tracking-tighter">PURE COFFEE</h4>
                         </div>
                     </div>
 
-                    <div
-                        class="lg:col-span-1 lg:row-span-1 rounded-[32px] overflow-hidden relative group cursor-pointer border border-white/10 hover:border-primary/50 min-h-[150px] bg-[#111]">
-                        <img src="./assets/project-4.jpg" alt="Neon Festival"
-                            class="w-full h-full object-cover group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-tr from-[#2D3436]/80 to-transparent flex flex-col justify-end p-4">
+                    <div class="lg:col-span-1 lg:row-span-1 rounded-[32px] overflow-hidden relative group cursor-pointer border border-white/10 hover:border-primary/50 min-h-[150px] bg-black transition-all duration-500 opacity-70 hover:opacity-100">
+                        <img src="./assets/project-4.jpg" alt="Neon Festival" class="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-[#2D3436]/90 to-transparent flex flex-col justify-end p-6 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
                             <h4 class="text-base font-bold text-white uppercase tracking-tighter">NEON FESTIVAL</h4>
                         </div>
                     </div>
 
-                    <div
-                        class="sm:col-span-2 lg:col-span-4 lg:row-span-1 rounded-[32px] overflow-hidden relative group cursor-pointer border border-white/10 hover:border-primary/50 shadow-2xl min-h-[150px] bg-[#111]">
-                        <img src="./assets/project-5.jpg" alt="Global Eco Summit"
-                            class="w-full h-full object-cover group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+                    <div class="sm:col-span-2 lg:col-span-4 lg:row-span-1 rounded-[32px] overflow-hidden relative group cursor-pointer border border-white/10 hover:border-primary/50 shadow-2xl min-h-[150px] bg-black transition-all duration-500 opacity-70 hover:opacity-100">
+                        <img src="./assets/project-5.jpg" alt="Global Eco Summit" class="w-full h-full object-cover transition-transform duration-1000 ease-in-out group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
                         <div class="absolute inset-0 p-8 flex flex-col justify-center items-start">
-                            <h3
-                                class="text-xl md:text-2xl font-black text-white leading-none tracking-tighter uppercase">
-                                GLOBAL ECO SUMMIT</h3>
+                            <h3 class="text-xl md:text-3xl font-black text-white leading-none tracking-tighter uppercase">GLOBAL ECO SUMMIT</h3>
                         </div>
                     </div>
                 </div>
@@ -470,61 +414,66 @@
         <section class="py-24 bg-[#070707] text-[#2D3436] border-t border-white/5">
             <div class="max-w-[1400px] mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-5 gap-20">
                 <div class="lg:col-span-2">
-                    <span class="text-primary font-bold uppercase tracking-[0.4em] text-[8px] mb-4 block">Knowledge
+                    <span class="text-primary font-bold uppercase tracking-[0.4em] text-sm mb-4 block">Knowledge
                         Base</span>
-                    <h2 class="text-4xl md:text-5xl font-black text-white leading-none tracking-tighter">COMMON<br><span
-                            class="text-primary italic">QUERIES.</span></h2>
-                    <p class="text-gray-500 mt-6 max-w-xs text-xs">Find answers to the most frequent questions about our
+                    <h2 class="text-4xl md:text-5xl font-black text-white leading-none tracking-tighter">COMMON<br>
+                        <span class="text-primary italic">QUERIES.</span></h2>
+                    <p class="text-gray-500 mt-6 max-w-xs text-base">Find answers to the most frequent questions about our
                         workflow, delivery, and creative standards.</p>
                 </div>
 
-                <div class="accordion flex flex-col gap-6 lg:col-span-3">
-                    <details name="my-accordion-det-1" open
-                        class="bg-white/5 border border-white/10 overflow-hidden rounded-[24px] sm:rounded-[32px] text-white">
-                        <summary class="cursor-pointer flex group items-center justify-between p-8">
-                            <h3 class="font-bold group-hover:text-primary text-lg transition-colors">What types of
-                                projects do you specialize in?</h3>
-                            <div
-                                class="border border-white/10 flex h-10 items-center justify-center rounded-full w-10 group-hover:bg-primary group-hover:text-[#070707]">
-                                <span class="icon-plus font-light text-xl"></span>
+                <div class="flex flex-col gap-4 lg:col-span-3">
+                    <details name="kb-accordion" open class="group bg-white/[0.02] border border-white/5 rounded-3xl overflow-hidden transition-all duration-500 hover:bg-white/[0.05] open:bg-white/[0.08] open:border-primary/20 shadow-2xl">
+                        <summary class="flex items-center justify-between p-8 cursor-pointer list-none outline-none group-open:pb-2">
+                            <div class="flex items-center gap-6">
+                                <span class="text-base font-bold text-primary uppercase tracking-tighter group-open:text-primary transition-colors duration-500">Q.01</span>
+                                <h3 class="text-xl font-bold text-white/90 group-hover:text-white group-open:text-primary transition-colors duration-500">What types of projects do you specialize in?</h3>
+                            </div>
+                            <div class="w-10 h-10 rounded-full border border-white/10 text-white flex items-center justify-center transition-all duration-500 group-hover:border-primary group-open:bg-primary group-open:border-primary group-open:text-white shadow-lg shadow-black/20">
+                                <svg class="w-4 h-4 transition-transform duration-500 ease-out rotate-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m19 9-7 7-7-7"/></svg>
                             </div>
                         </summary>
-                        <div class="block leading-relaxed pb-8 px-8 text-gray-400 text-sm">
-                            <p>We firmly believe in pushing boundaries. We specialize in digital product design, web &
-                                app development, digital strategy, advertising, branding, and video production.</p>
+                        <div class="px-8 pb-8 pt-4">
+                            <div class="h-px w-full bg-gradient-to-r from-primary/20 to-transparent mb-6 opacity-30 group-open:opacity-100 transition-opacity duration-500"></div>
+                            <p class="text-gray-400 leading-relaxed text-base max-w-2xl">
+                                We firmly believe in pushing boundaries. We specialize in digital product design, web & app development, digital strategy, advertising, branding, and video production.
+                            </p>
                         </div>
                     </details>
 
-                    <details name="my-accordion-det-1"
-                        class="bg-white/5 border border-white/10 overflow-hidden rounded-[32px] text-white">
-                        <summary class="cursor-pointer flex group items-center justify-between p-8">
-                            <h3 class="font-bold group-hover:text-primary text-lg transition-colors">Can you handle both
-                                design and strategy?</h3>
-                            <div
-                                class="border border-white/10 flex h-10 items-center justify-center rounded-full w-10 group-hover:bg-primary group-hover:text-[#070707]">
-                                <span class="icon-plus font-light text-xl"></span>
+                    <details name="kb-accordion" class="group bg-white/[0.02] border border-white/5 rounded-3xl overflow-hidden transition-all duration-500 hover:bg-white/[0.05] open:bg-white/[0.08] open:border-primary/20 shadow-2xl">
+                        <summary class="flex items-center justify-between p-8 cursor-pointer list-none outline-none group-open:pb-2">
+                            <div class="flex items-center gap-6">
+                                <span class="text-base font-bold text-primary uppercase tracking-tighter group-open:text-primary transition-colors duration-500">Q.02</span>
+                                <h3 class="text-xl font-bold text-white/90 group-hover:text-white group-open:text-primary transition-colors duration-500">Can you handle both design and strategy?</h3>
+                            </div>
+                            <div class="w-10 h-10 rounded-full border border-white/10 text-white flex items-center justify-center transition-all duration-500 group-hover:border-primary group-open:bg-primary group-open:border-primary group-open:text-white shadow-lg shadow-black/20">
+                                <svg class="w-4 h-4 transition-transform duration-500 ease-out rotate-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m19 9-7 7-7-7"/></svg>
                             </div>
                         </summary>
-                        <div class="block leading-relaxed pb-8 px-8 text-gray-400 text-sm">
-                            <p>Yes, our multidisciplinary team incorporates strategy from the very beginning of the
-                                design process, ensuring our beautifully crafted solutions also meet your business
-                                goals.</p>
+                        <div class="px-8 pb-8 pt-4">
+                            <div class="h-px w-full bg-gradient-to-r from-primary/20 to-transparent mb-6 opacity-30 group-open:opacity-100 transition-opacity duration-500"></div>
+                            <p class="text-gray-400 leading-relaxed text-base max-w-2xl">
+                                Yes, our multidisciplinary team incorporates strategy from the very beginning of the design process, ensuring our beautifully crafted solutions also meet your business goals.
+                            </p>
                         </div>
                     </details>
 
-                    <details name="my-accordion-det-1"
-                        class="bg-white/5 border border-white/10 overflow-hidden rounded-[32px] text-white">
-                        <summary class="cursor-pointer flex group items-center justify-between p-8">
-                            <h3 class="font-bold group-hover:text-primary text-lg transition-colors">Do you work with
-                                international clients?</h3>
-                            <div
-                                class="border border-white/10 flex h-10 items-center justify-center rounded-full w-10 group-hover:bg-primary group-hover:text-[#070707]">
-                                <span class="icon-plus font-light text-xl"></span>
+                    <details name="kb-accordion" class="group bg-white/[0.02] border border-white/5 rounded-3xl overflow-hidden transition-all duration-500 hover:bg-white/[0.05] open:bg-white/[0.08] open:border-primary/20 shadow-2xl">
+                        <summary class="flex items-center justify-between p-8 cursor-pointer list-none outline-none group-open:pb-2">
+                            <div class="flex items-center gap-6">
+                                <span class="text-base font-bold text-primary uppercase tracking-tighter group-open:text-primary transition-colors duration-500">Q.03</span>
+                                <h3 class="text-xl font-bold text-white/90 group-hover:text-white group-open:text-primary transition-colors duration-500">Do you work with international clients?</h3>
+                            </div>
+                            <div class="w-10 h-10 rounded-full border border-white/10 text-white flex items-center justify-center transition-all duration-500 group-hover:border-primary group-open:bg-primary group-open:border-primary group-open:text-white shadow-lg shadow-black/20">
+                                <svg class="w-4 h-4 transition-transform duration-500 ease-out rotate-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m19 9-7 7-7-7"/></svg>
                             </div>
                         </summary>
-                        <div class="block leading-relaxed pb-8 px-8 text-gray-400 text-sm">
-                            <p>Absolutely! We have partnered with ambitious companies all over the world to deliver
-                                seamless global projects with localized impacts.</p>
+                        <div class="px-8 pb-8 pt-4">
+                            <div class="h-px w-full bg-gradient-to-r from-primary/20 to-transparent mb-6 opacity-30 group-open:opacity-100 transition-opacity duration-500"></div>
+                            <p class="text-gray-400 leading-relaxed text-base max-w-2xl">
+                                Absolutely! We have partnered with ambitious companies all over the world to deliver seamless global projects with localized impacts.
+                            </p>
                         </div>
                     </details>
                 </div>
@@ -533,11 +482,10 @@
         </main>
 
         <footer class="pt-16 md:pt-24 pb-12 bg-[#070707] text-white relative overflow-hidden border-t border-white/10">
-            <div
-                class="max-w-[1400px] gap-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mx-auto px-6 md:px-10 mb-10 z-10 relative">
+            <div class="max-w-[1400px] gap-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mx-auto px-6 md:px-10 mb-10 z-10 relative">
                 <div class="md:col-span-2">
-                    <h2 class="mb-4 text-2xl font-extrabold tracking-wider">CREATEON</h2>
-                    <p class="text-gray-500 text-xs max-w-sm mb-6 leading-relaxed">We are a visionary agency that drives
+                    <h2 class="mb-4 text-3xl font-extrabold tracking-wider">CREATEON</h2>
+                    <p class="text-gray-500 text-base max-w-sm mb-6 leading-relaxed">We are a visionary agency that drives
                         real results through our powerful blend of strategy, creative design, and technical brilliance.
                     </p>
 
@@ -559,7 +507,7 @@
 
                 <div>
                     <h3 class="text-xl font-bold mb-6">Quick Link</h3>
-                    <ul class="flex-col gap-3 text-gray-500 text-sm flex">
+                    <ul class="flex-col gap-3 text-gray-500 text-base flex">
                         <li><a href="#" class="hover:text-primary transition-colors">About Us</a>
                         </li>
                         <li><a href="#" class="hover:text-primary transition-colors">Portfolio</a>
@@ -571,14 +519,13 @@
 
                 <div>
                     <h3 class="mb-6 text-xl font-bold">Contact Me</h3>
-                    <ul class="flex flex-col gap-4 text-gray-500 text-sm">
+                    <ul class="flex flex-col gap-4 text-gray-500 text-base">
                         <li class="flex items-center gap-4"><i class="fa-solid fa-envelope text-primary text-lg"></i>
                             Contact@gmail.com</li>
                         <li class="flex items-center gap-4"><i class="fa-solid fa-phone text-primary text-lg"></i> +123
                             4567
                             8901</li>
-                        <li class="flex items-center gap-4"><i
-                                class="fa-solid fa-location-dot text-primary text-lg"></i>
+                        <li class="flex items-center gap-4"><i class="fa-solid fa-location-dot text-primary text-lg"></i>
                             123 Street Name, New York</li>
                     </ul>
                 </div>
@@ -591,28 +538,39 @@
     </div>
 
     <script>
-        const accItems = document.querySelectorAll('details[name="my-accordion-det-1"]');
-        accItems.forEach(item => {
-            item.addEventListener('toggle', () => {
-                if (item.open) {
-                    accItems.forEach(el => {
-                        if (el !== item && el.open) {
-                            el.removeAttribute('open');
+        var accordionItems = document.querySelectorAll('details[name="kb-accordion"]');
+        for (var i = 0; i < accordionItems.length; i++) {
+            var item = accordionItems[i];
+            item.addEventListener('toggle', function () {
+                if (this.open) {
+                    for (var j = 0; j < accordionItems.length; j++) {
+                        var otherItem = accordionItems[j];
+                        if (otherItem !== this) {
+                            otherItem.removeAttribute('open');
                         }
-                    });
+                    }
                 }
             });
-        });
-
-        const mBtn = document.getElementById('menu-btn');
-        const mMenu = document.getElementById('mobile-menu');
-        const mIc = mBtn.querySelector('i');
-
-        mBtn.addEventListener('click', () => {
-            mMenu.classList.toggle('hidden');
-            mIc.classList.toggle('fa-bars');
-            mIc.classList.toggle('fa-xmark');
+        }
+        var menuButton = document.getElementById('menu-btn');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var menuIcon = menuButton.querySelector('i');
+        menuButton.addEventListener('click', function () {
+            var isHidden = mobileMenu.classList.contains('hidden');
+            if(isHidden === true) 
+            {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+            else 
+            {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.add('fa-bars');
+                menuIcon.classList.remove('fa-xmark');
+            }
         });
     </script>
 </body>
+
 </html>
